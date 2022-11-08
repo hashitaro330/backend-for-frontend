@@ -1,7 +1,7 @@
 FROM adoptopenjdk/maven-openjdk11:latest AS builder
 
 RUN apt-get update && apt-get install -y git
-RUN git clone https://github.com/hashitaro330/test-bff.git /var/local/aws-ecs
+RUN git clone https://github.com/hashitaro330/backend-for-frontend.git /var/local/aws-ecs
 RUN mvn install -f /var/local/aws-ecs/pom.xml
 
 FROM adoptopenjdk/openjdk11:alpine-slim
