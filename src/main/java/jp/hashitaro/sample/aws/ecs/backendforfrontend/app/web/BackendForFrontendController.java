@@ -15,10 +15,6 @@ public class BackendForFrontendController {
     @Autowired
     RestOperations restOperations;
 
-    @GetMapping("/")
-    public String index() {
-        return "index";
-    }
 
     @RequestMapping(method = RequestMethod.GET, value = "users")
     public String getUsers(Model model){
